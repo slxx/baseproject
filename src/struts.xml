@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+   <constant name="struts.ui.theme" value="simple" />
+   <constant name="struts.multipart.maxSize" value="10000000" />
+   <constant name="struts.multipart.saveDir" value="/temp"></constant>
+	<package name="default" extends="struts-default">
+	
+		 <global-results>
+			 <result name="message" >WEB-INF/jsp/share/message.jsp</result>
+			  <result name="pub_message" >WEB-INF/jsp/share/pub_message.jsp</result>
+			  <result name="directUrl" >WEB-INF/jsp/share/directUrl.jsp</result>
+			  <result name="pub_add_success">WEB-INF/jsp/share/pub_add_success.jsp</result>
+			   <result name="pub_del_success">WEB-INF/jsp/share/pub_del_success.jsp</result>
+		
+		</global-results>
+		
+		
+             <action name="login_*" class="loginAction" method="{1}" >
+		      <result name="success">welcome.jsp</result> 
+		       <result name="login">login.jsp</result> 
+		         <result name="menu">left.jsp</result> 
+		    </action> 
+		    <action name="user_*" class="userInfoAction" method="{1}">
+		       <result name="add">WEB-INF/jsp/user/userAdd.jsp</result>
+		       <result name="update">WEB-INF/jsp/user/userUpdate.jsp</result>
+		       <result name="view">WEB-INF/jsp/user/userView.jsp</result>
+		       <result name="list">WEB-INF/jsp/user/userList.jsp</result>
+		        <result name="assignRoleList">WEB-INF/jsp/userRole/assignRoleList.jsp</result>
+		    </action>  
+		    <action name="rent_*" class="rentInfoAction" method="{1}">
+		       <result name="add">WEB-INF/jsp/rent/rentUserAdd.jsp</result>
+		       <result name="update">WEB-INF/jsp/rent/rentUserUpdate.jsp</result>
+		       <result name="view">WEB-INF/jsp/rent/rentView.jsp</result>
+		       <result name="list">WEB-INF/jsp/rent/rentList.jsp</result>
+		    </action>  
+		    <action name="person_*" class="personInfoAction" method="{1}">
+		       <result name="add">WEB-INF/jsp/person/personAdd.jsp</result>
+		       <result name="update">WEB-INF/jsp/person/personUpdate.jsp</result>
+		       <result name="view">WEB-INF/jsp/person/personView.jsp</result>
+		       <result name="list">WEB-INF/jsp/person/personList.jsp</result>
+		       <result name="addUser">WEB-INF/jsp/user/userAdd.jsp</result>
+		       </action> 
+		    <action name="role_*" class="roleInfoAction" method="{1}">
+		       <result name="add">WEB-INF/jsp/role/roleAdd.jsp</result>
+		       <result name="update">WEB-INF/jsp/role/roleUpdate.jsp</result>
+		       <result name="view">WEB-INF/jsp/role/roleView.jsp</result>
+		       <result name="list">WEB-INF/jsp/role/roleList.jsp</result>
+		    </action>  
+		    <action name="menu_*" class="menuInfoAction" method="{1}">
+		       <result name="add">WEB-INF/jsp/menu/menuAdd.jsp</result>
+		       <result name="update">WEB-INF/jsp/menu/menuUpdate.jsp</result>
+		       <result name="view">WEB-INF/jsp/menu/menuView.jsp</result>
+		       <result name="list">WEB-INF/jsp/menu/menuList.jsp</result>
+		        <result name="addTree">WEB-INF/jsp/menu/menuTreeAdd.jsp</result>
+		    </action>  
+		    <action name="userRole_*" class="userRoleAction" method="{1}">
+		       <result name="assignRoleList">WEB-INF/jsp/userRole/assignRoleList.jsp</result>
+		       <result name="view">WEB-INF/jsp/user/userView.jsp</result>
+		       <result name="list">WEB-INF/jsp/userRole/userInfoList.jsp</result>
+		    </action>  
+		     <action name="roleMenu_*" class="roleMenuAction" method="{1}">
+		       <result name="assignMenuList">WEB-INF/jsp/roleMenu/assignMenuList.jsp</result>
+		       <result name="list">WEB-INF/jsp/roleMenu/roleInfoList.jsp</result>
+			</action>
+		
+			<action name="algorithm_*" class="algorithmManageAction" method="{1}">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="fileUpload">
+					<param name="maximumSize">92428800</param>
+				</interceptor-ref>
+				<result name="add">WEB-INF/jsp/algorithm/algorithmUpload.jsp</result>
+				<result name="list">WEB-INF/jsp/algorithm/algorithmStart.jsp</result>
+			  <result name="lookStatus">WEB-INF/jsp/algorithm/algorithmStatus.jsp</result>
+			<result name="JobProgress">WEB-INF/jsp/algorithm/algorithmProgressPrint.jsp</result>
+			<result name="jobStartParam">WEB-INF/jsp/algorithm/algorithmParam.jsp</result>
+				
+			</action> 
+		 
+		      </package>
+		   
+   
+</struts>
