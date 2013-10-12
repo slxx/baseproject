@@ -1,0 +1,229 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>修改</title>
+<link rel="stylesheet" href="css/index.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+
+ 
+<!--左导航-->
+</head>
+
+<body>
+<!--Header-part-->
+<div id="header"> <span class="logo"></span> 
+  <!--top-Header-menu-->
+  <div id="user-nav">
+    <ul class="nav">
+      <li class="active"><a title="" href="#"><i class="icon icon-user"></i>欢迎您！***1111</a> </li>
+      <li class=""><a title="" href="login.html"><i class="icon icon-quit"></i>退出</a></li>
+    </ul>
+  </div>
+  <!--close-top-Header-menu--> 
+</div>
+<!--close-Header-part--> 
+<!--sidebar-menu-->
+<div id="sidebar">
+  <div id="firstpane" class="menu_list">
+    <p class="menu_head menu01">系统菜单</p>
+    <div class="menu_body"> <a class="current" href="#">系统菜单管理</a> <a href="#">添加系统菜单</a></div>
+    <p class="menu_head menu02">租户管理</p>
+    <div class="menu_body"> <a href="#">租户信息管理</a> <a href="edit2.html">添加租户信息</a></div>
+    <p class="menu_head menu03">角色管理</p>
+    <div class="menu_body"> <a href="list.html">角色信息管理</a> <a href="#">添加角色信息</a></div>
+    <p class="menu_head menu04">人员管理</p>
+    <div class="menu_body"> <a href="index.html">人员信息管理</a> <a href="#">添加人员信息</a></div>
+    <p class="menu_head menu05">账户管理</p>
+    <div class="menu_body"> <a href="#">账户信息</a> <a href="#">密码修改</a></div>
+  </div>
+</div>
+<!--sidebar-menu--> 
+
+<!--main-container-part-->
+<div id="content"> 
+  <!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> <a href="#" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a> <a href="#" class="current last-child">系统菜单管理</a> </div>
+  </div>
+  <!--End-breadcrumbs--> 
+  <!--Action boxes-->
+  <div class="container-fluid">
+    <!--<div class="quick-actions_homepage">
+      <ul class="quick-actions">
+        <li class="bg_lb"> <a href="#"> <i class="icon-bc-sign"></i>保存</a> </li>
+        <li class="bg_lg"> <a href="#"> <i class="icon-cz-sign"></i>重置</a> </li>
+        <li class="bg_ly"> <a href="index.html"> <i class="icon-fh-sign"></i>返回</a> </li>
+      </ul>
+      <div style="clear:both; float:none;"></div>
+    </div>-->
+    <div class="widget-box">
+      <div class="widget-title"><span class="icon"><i class="icon-th"></i></span>
+        <h5>管理菜单</h5>
+      </div>
+      <div class="widget-content">
+        <form action="" method="get">
+          <div class="tree_l">
+            <menu id="nestable-menu">
+              <button type="button" data-action="expand-all" class="bg_lb expand-all">展开菜单</button>
+              <button type="button" data-action="collapse-all" class="bg_ly collapse-all">关闭菜单</button>
+            </menu>
+            <div class="cf nestable-lists">
+              <div class="dd" id="nestable3">
+                <ol class="dd-list">
+                  <li class="dd-item dd3-item" data-id="1">
+                    <div class="dd-handle dd3-handle"></div>
+                    <div class="dd3-content">菜单管理</div>
+                    <ol class="dd-list">
+                      <li class="dd-item dd3-item" data-id="2">
+                        <div class="dd-handle dd3-handle"></div>
+                        <div class="dd3-content"><a href="#">菜单信息</a></div>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="dd-item dd3-item" data-id="3">
+                    <div class="dd-handle dd3-handle"></div>
+                    <div class="dd3-content">角色管理</div>
+                    <ol class="dd-list">
+                      <li class="dd-item dd3-item" data-id="4">
+                        <div class="dd-handle dd3-handle"></div>
+                        <div class="dd3-content"><a href="#">角色信息</a></div>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="dd-item dd3-item" data-id="5">
+                    <div class="dd-handle dd3-handle"></div>
+                    <div class="dd3-content">人员管理</div>
+                    <ol class="dd-list">
+                      <li class="dd-item dd3-item" data-id="6">
+                        <div class="dd-handle dd3-handle"></div>
+                        <div class="dd3-content"><a href="#">人员信息</a></div>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="dd-item dd3-item" data-id="7">
+                    <div class="dd-handle dd3-handle"></div>
+                    <div class="dd3-content">租户管理</div>
+                    <ol class="dd-list">
+                      <li class="dd-item dd3-item" data-id="8">
+                        <div class="dd-handle dd3-handle"></div>
+                        <div class="dd3-content"><a href="#">租户信息</a></div>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="dd-item dd3-item" data-id="9">
+                    <div class="dd-handle dd3-handle"></div>
+                    <div class="dd3-content">个人管理</div>
+                    <ol class="dd-list">
+                      <li class="dd-item dd3-item" data-id="10">
+                        <div class="dd-handle dd3-handle"></div>
+                        <div class="dd3-content"><a href="#">修改个人信息</a></div>
+                      </li>
+                      <li class="dd-item dd3-item" data-id="11">
+                        <div class="dd-handle dd3-handle"></div>
+                        <div class="dd3-content"><a href="#">帐号信息</a></div>
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+            <script src="js/jquery.nestable.js"></script> 
+            <script>
+
+
+
+
+
+
+$(document).ready(function()
+{
+
+
+
+    var updateOutput = function(e)
+    {
+        var list   = e.length ? e : $(e.target),
+            output = list.data('output');
+        if (window.JSON) {
+            output.val(window.JSON.stringify(list.nestable('serialize')));//, null, 2));
+        } else {
+            output.val('JSON browser support required for this demo.');
+        }
+    }; 
+    // output initial serialised data  
+    $('#nestable-menu').on('click', function(e)
+    {
+        var target = $(e.target),
+            action = target.data('action');
+        if (action === 'expand-all') {
+            $('.dd').nestable('expandAll');
+        }
+        if (action === 'collapse-all') {
+            $('.dd').nestable('collapseAll');
+        }
+    });
+    $('#nestable3').nestable();
+});
+</script> 
+          </div>
+          <div style="display:none">
+          <div class="tree_r" >
+            <menu id="nestable-menu">
+              <button type="button" class="bg_lb expand-all">新增</button>
+              <button type="button" class="bg_ly collapse-all">取消</button>
+            </menu>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="td_r">菜单名称：</td>
+                <td class="td_l"><input name="" type="text" class="txt"></td>
+              </tr>
+              <tr>
+                <td class="td_r">帐号：</td>
+                <td class="td_l"><input name="" type="text" class="txt"></td>
+              </tr>
+              <tr>
+                <td class="td_r">所属租户：</td>
+                <td class="td_l"><select name="">
+                    <option value="租户1">租户1</option>
+                    <option value="租户2">租户2</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <td class="td_r">用户属性：</td>
+                <td class="td_l"><label>
+                    <input name="" type="radio" value="">
+                    属性1</label>
+                  <label>
+                    <input name="" type="radio" value="">
+                    属性2</label>
+                  <label>
+                    <input name="" type="radio" value="">
+                    属性3</label></td>
+              </tr>
+              <tr class="details">
+                <td class="td_r">详细描述：</td>
+                <td class="td_l"><textarea name="" cols="" rows="" class="txt_area"></textarea></td>
+              </tr>
+            </table>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end-main-container-part--> 
+
+<!--Footer-part-->
+<div class="row-fluid">
+  <div id="footer" class="span12"> 2013 &copy; Shenlu Admin.</div>
+</div>
+
+
+ 
+<!--end-Footer-part-->
+</body>
+</html>
